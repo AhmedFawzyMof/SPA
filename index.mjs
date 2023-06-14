@@ -49,6 +49,9 @@ const Router = () => {
 
 
 window.onload = () => {
+    if (!window.location.hash) {
+        window.location.assign('/#/')
+    }
     Router()
     window.onhashchange = () => {
         Router()
